@@ -1,0 +1,12 @@
+<h1> Login Page </h1>
+<%= form_tag do%>
+<p><label>UserName:</label>
+<%= text_field_tag 'user' %>
+</p>
+<p><label>Password:</label>
+<%= password_field_tag 'password' %>
+</p>
+<p><%= submit_tag 'login'%></p>
+<% end %>
+<li><%= link_to "Register new user" ,'users/new' %></li>
+
