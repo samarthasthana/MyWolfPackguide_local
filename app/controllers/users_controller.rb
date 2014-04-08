@@ -71,7 +71,7 @@ class UsersController < ApplicationController
 				# register the new user and persist 
 				@user_new=User.new
 				@user_new.user_name=params[:new_user_name]
-				@user_new.pwd=params[:new_user_password]
+				@user_new.password=params[:new_user_password]
 				@user_new.user_type="N"
 				@user_new.email=params[:new_user_email]
 				if(@user_new.save!)
