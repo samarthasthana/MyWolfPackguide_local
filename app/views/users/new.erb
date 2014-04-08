@@ -1,1 +1,9 @@
 <h1>New user registration</h1>
+<%= form_tag do %>
+<p><label>UserName</label><%= text_field_tag  'new_user_name' %></p>
+<p><label>Password</label><%= password_field_tag  'new_user_password' %></p>
+<p><label>Confirm Password</label><%= password_field_tag  'new_user_confirm' %></p>
+<p><label>Email address</label><%= text_field_tag  'new_user_email' %></p>
+<p><%= submit_tag 'Register' %></p>
+<% end %>
+
