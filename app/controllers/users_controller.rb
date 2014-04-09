@@ -1,3 +1,7 @@
+require 'google/api_client'
+require 'google/api_client/client_secrets'
+
+
 class UsersController < ApplicationController
 	def login		
 		redirect_path=nil
@@ -29,6 +33,7 @@ class UsersController < ApplicationController
 				# redirect to home_page with session [:name]
 				if(@user_entry.user_type=="A")
 					#redirect to admin home page
+					redirect_to '/admin_home'
 				else
 					session[:user_name]=@user_entry.user_name
 					redirect_to '/home_page'
@@ -87,6 +92,23 @@ class UsersController < ApplicationController
 	end
 
 	def home_page
-		
+		 client = Google::APIClient.new(
+		    :application_name => 'WolfPackGuide',
+		    :application_version => '1.0.0')
+
+		 CLIENT_SECRETS = Google::APIClient::ClientSecrets.load
+		 authorization = CLIENT_SECRETS.to_authorization
+		 client.authorization = authorization
+
+		 calendar = client.discovered_api('calendar', 'v3')
+
+		 @results=client.execute(
+		  :api_method => calendar_api.events.list,
+		  :parameters => {'calendarId' => 'primary'})
+
 	end	
+
+	def admin_home
+		
+	end
 end

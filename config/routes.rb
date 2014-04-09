@@ -3,7 +3,16 @@ WolfPackGuide::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+   root 'users#login'
+
+   # Users routes
+   post '/' => 'users#login'
+   get 'users/new' => 'users#new'
+   post 'users/new' => 'users#new'
+
+   get '/home_page' => 'users#home_page'
+
+   get '/admin_home' => 'users#admin_home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

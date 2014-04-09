@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cal_id: MyString
+  event_id: MyString
+  uid: 1
+
+two:
+  cal_id: MyString
+  event_id: MyString
+  uid: 1

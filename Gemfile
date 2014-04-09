@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 1.2'
 # Require Google ruby client api
 require 'google/api_client'
 
+#using bcrypt to create password hashes
+gem 'bcrypt-ruby'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
