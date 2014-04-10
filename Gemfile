@@ -33,6 +33,12 @@ require 'google/api_client'
 #using bcrypt to create password hashes
 gem 'bcrypt-ruby'
 
+# Used to make calendars accessible
+gem 'google_calendar'
+
+# Alternate solution to accessing calendars
+gem 'gcal4ruby', '~> 0.5.5'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
