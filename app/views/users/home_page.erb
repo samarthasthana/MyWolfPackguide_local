@@ -1,9 +1,10 @@
 <h1>Home Page</h1>
 
 <p><%- for calendar in @cal %>
-<% events=calendar.events %>
+<%- events=calendar.events %>
 	<%- for event in events %>	
-	<%= event.title %><br>
+	<%= event.title %>
+	<%= event.id %><br></br>
 	<%- end %>
 <%- end %>
 </p>

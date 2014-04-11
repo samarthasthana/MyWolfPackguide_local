@@ -115,10 +115,15 @@ class UsersController < ApplicationController
 		 #for event in events
 		 #   puts event.title 
 		 # end
-		 
 	end	
 
 	def admin_home
 		
 	end
+
+	def edit
+
+		
+	end
+
 end
